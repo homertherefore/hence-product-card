@@ -1,0 +1,24 @@
+{
+  "name": "hence-product-card",
+  "version": "0.1.0",
+  "authors": [
+    "Sean 'Blitz' Homer <sean.homer@therefore.ca>"
+  ],
+  "description": "",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer"
+  ],
+  "main": "dist/hence-product-card.html",
+  "homepage": "https://github.com/homertherefore/hence-product-card/",
+  "ignore": [
+    "/.*",
+    "/comp/gulp/",
+    "/comp/test/"
+  ],
+  "dependencies": {"polymer":"Polymer/polymer#^1.0.0","font-awesome":"~4.3.0"},
+  "devDependencies": {
+    "web-component-tester": "*"
+  }
+}

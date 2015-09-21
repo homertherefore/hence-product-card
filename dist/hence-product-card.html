@@ -1,0 +1,22 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../hence-product/dist/hence-product.html">
+<link rel="import" href="../../hence-card/dist/hence-card.html">
+
+<dom-module id="hence-product-card">
+  <template>
+    <template is="dom-if" if="{{query}}">
+      <hence-product action="get" query="{{query}}" results="{{state}}"></hence-product>
+      <template is="dom-if" if="{{state}}">
+        <hence-card props="{{renderState()}}"></hence-card>
+      </template>
+      <template is="dom-if" if="{{!state}}">
+        There is no entry to display, sorry...
+      </template>
+    </template>
+    <template is="dom-if" if="{{!query}}">
+      Loading entry...
+    </template>
+  </template>
+<link rel="import" type="css" href="css/hence-product-card.min.css">
+        <script src="js/hence-product-card.min.js"></script>
+        </dom-module>
