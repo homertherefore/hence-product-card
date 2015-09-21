@@ -1,0 +1,1 @@
+:host{display:block}@media (min-width:32em){:host{width:100%;float:left;margin-left:0;margin-right:0}}@media (min-width:48em){:host:nth-of-type(odd){width:44.44444%;float:left;margin-right:11.11111%}:host:nth-of-type(even){width:44.44444%;float:right;margin-right:0}}

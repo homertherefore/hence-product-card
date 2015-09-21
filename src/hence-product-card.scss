@@ -4,8 +4,8 @@
 // Core
 //@import 'compass';
 // Grid/Responsive
-//@import 'susy';
-//@import 'breakpoint';
+@import 'susy';
+@import 'breakpoint';
 // Spacing
 //@import 'modular-scale';
 
@@ -14,12 +14,39 @@
 ** Optional
 ****************************/
 // Font awesome
-//$fa-font-path : '/bower_components/font-awesome/fonts/' !default;
+//$fa-font-path: '/bower_components/font-awesome/fonts/' !default;
 //@import 'font-awesome';
 //
 /***************************
 ** Component Base Styles
 ****************************/
+:host {
+  display: block;
 
-//:host { // Style for the component wrapper built by shadow dom
-//}
+  & {
+    // xs view
+    @include breakpoint(32em) {
+      @include span(1 of 1);
+    }
+
+    // tablet view
+    @include breakpoint(48em) {
+      &:nth-of-type(odd)
+      {
+        @include span(1 of 2);
+      }
+      &:nth-of-type(even)
+      {
+        @include span(1 of 2 last);
+      }
+    }
+
+    // desktop view
+    @include breakpoint(62em) {
+    }
+
+    // large desktop view
+    @include breakpoint(75em) {
+    }
+  }
+}
