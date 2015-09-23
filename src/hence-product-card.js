@@ -95,7 +95,7 @@ let HenceProductCard = Hence.Model({
       }
     });
 
-    console.log('HenceProductCard processed',entry);
+    //console.log('HenceProductCard processed',entry);
 
     return entry;
   }
